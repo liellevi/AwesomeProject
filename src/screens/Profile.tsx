@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, StyleSheet, Text, TouchableOpacity} from 'react-native';
+import {View, StyleSheet, Text, TouchableOpacity } from 'react-native';
 import { WHITE_BACKGROUND} from '../consts';
 import { useAppDispatch, useAppSelector } from '../../hooks';
 import { RootState } from '../../store';
@@ -41,12 +41,11 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: '400',
     paddingLeft: 30,
-    borderTopWidth: 0.2,
     borderBottomColor: 'black',
   },
   textItem: {
     marginHorizontal: 20,
-    borderBottomWidth: 0.2,
+    borderBottomWidth: 0.4,
     borderBottomColor: 'black',
     height: 40,
     justifyContent: 'center',
