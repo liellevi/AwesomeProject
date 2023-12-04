@@ -1,15 +1,20 @@
 # AwesomeProject
- ExpensesApp
- Expenses Tracking App: Its purpose is to record current expenses, you can enter a date, amount and date for each expense. In addition, you can filter expenses, and edit existing expenses. The data is saved even when the application is closed. To delete data, log out of the app
+ ExpensesApp is an Expenses Tracking App.
+ Designed for record current expenses, user can record any expense with date, amount and date.
+ In addition, user can filter expenses, and edit existing expenses. The user data is saved to local storage. To delete data, log out the app from profile tab.
+
+To run this app:
 
 clone repository from: https://github.com/liellevi/AwesomeProject.git
 
-run npm install 
+run npm install
 
-To run on android: 
+Android: 
+npm start
 react-native run-android
 
-To run on iOS :
+iOS:
+npm start
 cd ios && pod install
 react-native run-ios
 
