@@ -35,7 +35,7 @@ export const FilterExpense: React.FC<Props> = ({
   const userData: ExpenseData[] =
     filteredData.length > 0 ? filteredData : expensesData
 
-  const dispatchFilteresData = () => {
+  const dispatchFilteredData = () => {
     let filteredUserData: ExpenseData[] = userData || []
     if (title) {
       filteredUserData = userData.filter((item) => !item.title.search(title))
@@ -98,7 +98,7 @@ export const FilterExpense: React.FC<Props> = ({
       />
       <TouchableOpacity
         style={styles.actionButton}
-        onPress={dispatchFilteresData}
+        onPress={dispatchFilteredData}
       >
         <Text style={styles.actionText}>Filter</Text>
       </TouchableOpacity>
