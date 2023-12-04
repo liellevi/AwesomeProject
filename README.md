@@ -7,9 +7,9 @@ clone repository from: https://github.com/liellevi/AwesomeProject.git
 run npm install 
 
 To run on android: 
-npm run android
+react-native run-android
 
 To run on iOS :
 cd ios && pod install
-npm run ios
+react-native run-ios
 
