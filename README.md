@@ -21,3 +21,7 @@ iOS:
 npm start
 cd ios && pod install
 react-native run-ios
+
+Android recording demo:
+https://github.com/liellevi/AwesomeProject/assets/39965298/3e82dea6-0e4c-45a7-9f9b-18cbda97eb34
+
