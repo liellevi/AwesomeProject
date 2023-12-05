@@ -21,8 +21,3 @@ iOS:
 npm start
 cd ios && pod install
 react-native run-ios
-
-
-
-https://github.com/liellevi/AwesomeProject/assets/39965298/0a05204b-3f31-467b-893b-be35a2d747ed
-
