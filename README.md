@@ -18,10 +18,13 @@ iOS:
 npm start
 
 cd ios && pod install
+
 react-native run-ios
 
 Android: 
+
 npm start
+
 react-native run-android
 
 Android recording demo:
