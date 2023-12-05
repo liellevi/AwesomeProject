@@ -14,7 +14,9 @@ To run this app:
 run npm install
 
 iOS:
+
 npm start
+
 cd ios && pod install
 react-native run-ios
 
