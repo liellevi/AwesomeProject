@@ -8,6 +8,7 @@ https://github.com/liellevi/AwesomeProject/assets/39965298/4cc42cb7-5aa4-4945-b7
  In addition, user can filter expenses, and edit existing expenses. The user data is saved to local storage. To delete data, log out the app from profile tab.
 
 To run this app:
+
 [clone repository](https://github.com/liellevi/ExpensesApp.git).
 
 run npm install
