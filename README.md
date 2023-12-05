@@ -9,7 +9,6 @@ https://github.com/liellevi/AwesomeProject/assets/39965298/4cc42cb7-5aa4-4945-b7
 
 To run this app:
 [clone repository](https://github.com/liellevi/ExpensesApp.git).
-clone repository: https://github.com/liellevi/AwesomeProject.git
 
 run npm install
 
