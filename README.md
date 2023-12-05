@@ -1,3 +1,7 @@
+
+
+https://github.com/liellevi/AwesomeProject/assets/39965298/4cc42cb7-5aa4-4945-b743-7db3f61c1a6b
+
 # AwesomeProject
  ExpensesApp is an Expenses Tracking App.
  Designed for record current expenses, user can record any expense with date, amount and date.
@@ -17,4 +21,8 @@ iOS:
 npm start
 cd ios && pod install
 react-native run-ios
+
+
+
+https://github.com/liellevi/AwesomeProject/assets/39965298/0a05204b-3f31-467b-893b-be35a2d747ed
 
