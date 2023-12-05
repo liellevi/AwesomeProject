@@ -51,8 +51,8 @@ export const HomeScreen = ({ navigation, route }: Props): JSX.Element => {
       navigation.navigate('CreateOrEditExpense', screenParams)
     }
     const fractionalPart = item.data.amount?.toString().split('.')[1] || '00'
-    let retVal: JSX.Element | null = null
-    retVal = (
+    let returnVal: JSX.Element | null = null
+    returnVal = (
       <View>
         {item.data?.sectionTitle && (
           <View style={styles.sectionView}>
@@ -80,7 +80,7 @@ export const HomeScreen = ({ navigation, route }: Props): JSX.Element => {
       </View>
     )
 
-    return retVal
+    return returnVal
   }
 
   return (

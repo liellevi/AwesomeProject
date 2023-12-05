@@ -30,7 +30,7 @@ export const CreateOrEditExpense = ({
   const [amount, onChangeAmount] = React.useState<string>('')
   const [date, onChangeDate] = React.useState<string>('')
 
-  const setParamsData = (): void => {
+  const setDataToState = (): void => {
     const expenseId = route.params?.expenseId
     onChangeTitle(expensesData[expenseId].title)
     onChangeAmount(expensesData[expenseId].amount.toString())
@@ -38,7 +38,7 @@ export const CreateOrEditExpense = ({
   }
 
   useEffect(() => {
-    editMode && setParamsData()
+    editMode && setDataToState()
   }, [])
 
   const dispatchNewExpenseData = () => {
@@ -52,15 +52,14 @@ export const CreateOrEditExpense = ({
       ]
       let oldUserData = expensesData
       if (editMode) {
-        oldUserData = expensesData.filter(
-          (expense) => expense != expensesData[route.params?.expenseId],
-        )
+        oldUserData = expensesData.filter((expense) => expense != expensesData[route.params?.expenseId])
       }
       const updatedUserData = newExpenseData.concat(oldUserData)
-      updatedUserData && dispatch(setExpensesData(updatedUserData))
+      dispatch(setExpensesData(updatedUserData))
       navigation.goBack()
     }
   }
+
   const navigateBack = (): void => {
     navigation.goBack()
   }

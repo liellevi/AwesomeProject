@@ -24,7 +24,49 @@ export type RootStackParamList = {
   FilterExpense: undefined
 }
 const Stack = createNativeStackNavigator<RootStackParamList>()
-const Tab = createBottomTabNavigator()
+
+function App(): JSX.Element {
+  return (
+    <Provider store={store}>
+      <PersistGate loading={null} persistor={persistor}>
+        <NavigationContainer>
+          <SafeAreaView style={styles.container}>
+            <Stack.Navigator>
+              <Stack.Screen
+                name="LoginScreen"
+                component={LoginScreen}
+                options={{ headerShown: false, gestureEnabled: false }}
+              />
+              <Stack.Screen
+                name="Home"
+                component={HomeTabs}
+                options={() => ({
+                  gestureEnabled: false,
+                  headerShown: false
+                })}
+              />
+              <Stack.Group screenOptions={{ presentation: 'modal' }}>
+                <Stack.Screen
+                  name="CreateOrEditExpense"
+                  component={CreateOrEditExpense}
+                  options={{ headerShown: false }}
+                />
+              </Stack.Group>
+              <Stack.Group screenOptions={{ presentation: 'transparentModal' }}>
+                <Stack.Screen
+                  name="FilterExpense"
+                  component={FilterExpense}
+                  options={{ headerShown: false }}
+                />
+              </Stack.Group>
+            </Stack.Navigator>
+          </SafeAreaView>
+        </NavigationContainer>
+      </PersistGate>
+    </Provider>
+  )
+}
+
 
 const CreateNewPlaceHolder = (): JSX.Element => (
   <View style={styles.modalView} />
@@ -34,6 +76,7 @@ const createCreateIconComponent = (): JSX.Element => {
     <Image source={require('./src/images/plus.png')} style={styles.plusIcon} />
   )
 }
+const Tab = createBottomTabNavigator()
 
 function HomeTabs() {
   return (
@@ -82,49 +125,6 @@ function HomeTabs() {
     </Tab.Navigator>
   )
 }
-function App(): JSX.Element {
-  return (
-    <Provider store={store}>
-      <PersistGate loading={null} persistor={persistor}>
-        <NavigationContainer>
-          <SafeAreaView style={styles.container}>
-            <Stack.Navigator>
-              <Stack.Screen
-                name="LoginScreen"
-                component={LoginScreen}
-                options={{ headerShown: false, gestureEnabled: false }}
-              />
-              <Stack.Screen
-                name="Home"
-                component={HomeTabs}
-                options={() => ({
-                  headerBackVisible: false,
-                  gestureEnabled: false,
-                  headerShown: false,
-                })}
-              />
-              <Stack.Group screenOptions={{ presentation: 'modal' }}>
-                <Stack.Screen
-                  name="CreateOrEditExpense"
-                  component={CreateOrEditExpense}
-                  options={{ headerShown: false }}
-                />
-              </Stack.Group>
-              <Stack.Group screenOptions={{ presentation: 'transparentModal' }}>
-                <Stack.Screen
-                  name="FilterExpense"
-                  component={FilterExpense}
-                  options={{ headerShown: false }}
-                />
-              </Stack.Group>
-            </Stack.Navigator>
-          </SafeAreaView>
-        </NavigationContainer>
-      </PersistGate>
-    </Provider>
-  )
-}
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
